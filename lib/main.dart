@@ -9,19 +9,19 @@ void main() {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((
     _,
   ) {
-    runApp(iBorrowApp());
+    runApp(IBorrowApp());
   });
 }
 
-class iBorrowApp extends StatelessWidget {
-  const iBorrowApp({super.key});
+class IBorrowApp extends StatelessWidget {
+  const IBorrowApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Sizer(
       builder: (context, orientation, deviceType) {
         return MaterialApp(
-          title: 'iBorrow - Library Management',
+          title: 'iBorrow',
           theme: theme,
           navigatorKey: NavigatorService.navigatorKey,
           debugShowCheckedModeBanner: false,

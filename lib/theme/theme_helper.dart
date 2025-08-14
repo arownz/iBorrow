@@ -6,13 +6,13 @@ ThemeData get theme => ThemeHelper().themeData();
 
 /// Helper class for managing themes and colors for iBorrow
 class ThemeHelper {
-  var _appTheme = "libraryTheme";
+  final _appTheme = "libraryTheme";
 
-  Map<String, LibraryColors> _supportedCustomColor = {
+  final Map<String, LibraryColors> _supportedCustomColor = {
     'libraryTheme': LibraryColors(),
   };
 
-  Map<String, ColorScheme> _supportedColorScheme = {
+  final Map<String, ColorScheme> _supportedColorScheme = {
     'libraryTheme': ColorSchemes.libraryColorScheme,
   };
 
@@ -39,7 +39,6 @@ class ColorSchemes {
     primary: Color(0xFFFC8520),
     secondary: Color(0xFFBA5A13),
     surface: Color(0xFFFFF2DF),
-    background: Color(0xFFFFF2DF),
   );
 }
 

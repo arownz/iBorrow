@@ -7,7 +7,7 @@ import '../widgets/custom_text_field.dart';
 /// Sign up screen for iBorrow application
 /// Allows new users to create accounts
 class SignupScreen extends StatefulWidget {
-  const SignupScreen({Key? key}) : super(key: key);
+  const SignupScreen({super.key});
 
   @override
   State<SignupScreen> createState() => _SignupScreenState();
@@ -333,6 +333,8 @@ class _SignupScreenState extends State<SignupScreen> {
       // TODO: Implement Supabase user registration
       // For now, simulate loading and show success
       Future.delayed(Duration(seconds: 2), () {
+        if (!mounted) return; // Check if widget is still mounted
+
         setState(() {
           _isLoading = false;
         });

@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import '../core/app_export.dart';
 import 'home_screen.dart';
-import 'books_screen.dart';
+import 'library_screen.dart';
 import 'saved_screen.dart';
 import 'profile_screen.dart';
 
 /// Main navigation wrapper for user screens with bottom navigation
-class UserDashboard extends StatefulWidget {
-  const UserDashboard({super.key});
+class UserMainScreen extends StatefulWidget {
+  const UserMainScreen({super.key});
 
   @override
-  State<UserDashboard> createState() => _UserDashboardState();
+  State<UserMainScreen> createState() => _UserMainScreenState();
 }
 
-class _UserDashboardState extends State<UserDashboard> {
+class _UserMainScreenState extends State<UserMainScreen> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
     HomeScreen(),
-    BooksScreen(),
+    LibraryScreen(),
     SavedScreen(),
     ProfileScreen(),
   ];

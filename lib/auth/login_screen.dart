@@ -7,7 +7,7 @@ import '../widgets/custom_text_field.dart';
 /// Login screen for iBorrow application
 /// Supports both user and admin authentication
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -52,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   /// Header section with background image and title
   Widget _buildHeaderSection() {
-    return Container(
+    return SizedBox(
       height: 527.h,
       width: double.infinity,
       child: Stack(
@@ -75,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Positioned(
             top: 475.h,
             left: 35.h,
-            child: Container(
+            child: SizedBox(
               width: 150.h,
               height: 52.h,
               child: Text(

@@ -4,14 +4,14 @@ import '../core/app_export.dart';
 
 extension ImageTypeExtension on String {
   ImageType get imageType {
-    if (this.startsWith('http') || this.startsWith('https')) {
-      if (this.endsWith('.svg')) {
+    if (startsWith('http') || startsWith('https')) {
+      if (endsWith('.svg')) {
         return ImageType.networkSvg;
       }
       return ImageType.network;
-    } else if (this.endsWith('.svg')) {
+    } else if (endsWith('.svg')) {
       return ImageType.svg;
-    } else if (this.startsWith('file://')) {
+    } else if (startsWith('file://')) {
       return ImageType.file;
     } else {
       return ImageType.png;
@@ -24,7 +24,7 @@ enum ImageType { svg, png, network, networkSvg, file, unknown }
 /// Custom image view widget for iBorrow application
 class CustomImageView extends StatelessWidget {
   CustomImageView({
-    Key? key,
+    super.key,
     String? imagePath,
     this.height,
     this.width,
@@ -38,8 +38,7 @@ class CustomImageView extends StatelessWidget {
     this.placeHolder,
   }) : imagePath = imagePath?.isNotEmpty == true
            ? imagePath
-           : ImageConstant.imgImageNotFound,
-       super(key: key);
+           : ImageConstant.imgImageNotFound;
 
   final String? imagePath;
   final double? height;
@@ -93,7 +92,7 @@ class CustomImageView extends StatelessWidget {
     switch (imagePath!.imageType) {
       case ImageType.svg:
         // For now, show an icon instead of SVG until flutter_svg is properly set up
-        return Container(
+        return SizedBox(
           height: height,
           width: width,
           child: Icon(

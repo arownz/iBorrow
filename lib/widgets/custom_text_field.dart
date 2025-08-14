@@ -4,7 +4,7 @@ import '../core/app_export.dart';
 /// Custom text field widget for iBorrow application
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
-    Key? key,
+    super.key,
     this.controller,
     this.hintText,
     this.labelText,
@@ -16,7 +16,7 @@ class CustomTextField extends StatelessWidget {
     this.validator,
     this.suffixIcon,
     this.prefixIcon,
-  }) : super(key: key);
+  });
 
   final TextEditingController? controller;
   final String? hintText;

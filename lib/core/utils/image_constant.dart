@@ -1,7 +1,7 @@
 // Image constants for iBorrow application
 class ImageConstant {
   // Base path for all assets
-  static String _basePath = 'assets/images/';
+  static final String _basePath = 'assets/images/';
 
   // Placeholder image for fallback
   static String imgImageNotFound = '${_basePath}image_not_found.png';

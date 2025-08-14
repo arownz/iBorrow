@@ -4,7 +4,7 @@ import '../core/app_export.dart';
 /// Admin dashboard for iBorrow application
 /// Main screen for library administrators to manage books and users
 class AdminDashboard extends StatefulWidget {
-  const AdminDashboard({Key? key}) : super(key: key);
+  const AdminDashboard({super.key});
 
   @override
   State<AdminDashboard> createState() => _AdminDashboardState();
@@ -59,7 +59,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
         borderRadius: BorderRadius.circular(12.h),
         boxShadow: [
           BoxShadow(
-            color: appTheme.greyCustom.withOpacity(0.1),
+            color: appTheme.greyCustom.withValues(alpha: 0.1),
             blurRadius: 8,
             offset: Offset(0, 2),
           ),
@@ -103,7 +103,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
       decoration: BoxDecoration(
         color: appTheme.colorFFFFF2,
         borderRadius: BorderRadius.circular(8.h),
-        border: Border.all(color: appTheme.colorFFBA5A.withOpacity(0.3)),
+        border: Border.all(color: appTheme.colorFFBA5A.withValues(alpha: 0.3)),
       ),
       child: Column(
         children: [
@@ -183,7 +183,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
         decoration: BoxDecoration(
           color: appTheme.whiteCustom,
           borderRadius: BorderRadius.circular(12.h),
-          border: Border.all(color: appTheme.colorFFBA5A.withOpacity(0.3)),
+          border: Border.all(color: appTheme.colorFFBA5A.withValues(alpha: 0.3)),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -237,7 +237,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
           Container(
             padding: EdgeInsets.all(8.h),
             decoration: BoxDecoration(
-              color: appTheme.colorFFBA5A.withOpacity(0.1),
+              color: appTheme.colorFFBA5A.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(8.h),
             ),
             child: Icon(icon, size: 16.h, color: appTheme.colorFFBA5A),

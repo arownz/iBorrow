@@ -4,7 +4,7 @@ import '../core/app_export.dart';
 /// Custom submit button for iBorrow application
 class CustomSubmitButton extends StatelessWidget {
   const CustomSubmitButton({
-    Key? key,
+    super.key,
     required this.text,
     this.onPressed,
     this.width,
@@ -15,7 +15,7 @@ class CustomSubmitButton extends StatelessWidget {
     this.borderRadius,
     this.isEnabled = true,
     this.isLoading = false,
-  }) : super(key: key);
+  });
 
   final String text;
   final VoidCallback? onPressed;
@@ -45,8 +45,8 @@ class CustomSubmitButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           backgroundColor: bgColor,
           foregroundColor: txtColor,
-          disabledBackgroundColor: bgColor.withOpacity(0.5),
-          disabledForegroundColor: txtColor.withOpacity(0.5),
+          disabledBackgroundColor: bgColor.withValues(alpha: 0.5),
+          disabledForegroundColor: txtColor.withValues(alpha: 0.5),
           elevation: 2,
           shadowColor: appTheme.transparentCustom,
           shape: RoundedRectangleBorder(
